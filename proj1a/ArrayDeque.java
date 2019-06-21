@@ -84,12 +84,7 @@ public class ArrayDeque<Item> {
 
     /** Returns true if the Deque is empty, false otherwise. */
     public boolean isEmpty() {
-        if (size == 0) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return size == 0;
     }
 
     /** Returns the number of items in the Deque. */
@@ -142,10 +137,7 @@ public class ArrayDeque<Item> {
 
     /** Returns true if the ith item exists, false otherwise. */
     private boolean isExist(int i) {
-        if (i > nextFirst || i < nextLast) {
-            return true;
-        }
-        return false;
+        return i > nextFirst || i < nextLast;
     }
 
     /** Gets the item at the given index, if no such items exists, returns null. */
